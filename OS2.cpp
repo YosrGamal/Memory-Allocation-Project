@@ -137,9 +137,12 @@ void bestFit(int numOfBlocks, vector<int> &block, int numOfProcesses, vector<int
 	}
 
 	int count = process.size() - result.size();
-	if (count >= 0)
+	if (count > 0)
 	{
 		cout << "Number of processes is bigger than available blocks therefore there is " << count + counter << " that weren't allocated in the memory" << endl;
+	}
+	if (count >= 0)
+	{
 		cout << "There was " << counter << " block of memory that remained empty" << endl;
 	}
 }
@@ -196,9 +199,12 @@ void worstFit(int numOfBlocks, vector<int> &block, int numOfProcesses, vector<in
 		cout << endl;
 	}
 	int count = process.size() - result.size();
-	if (count >= 0)
+	if (count > 0)
 	{
 		cout << "Number of processes is bigger than available blocks therefore there is " << count + counter << " that weren't allocated in the memory" << endl;
+	}
+	if (count >= 0)
+	{
 		cout << "There was " << counter << " block of memory that remained empty" << endl;
 	}
 }
